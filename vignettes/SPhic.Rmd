@@ -1,15 +1,15 @@
 ---
-title: "SPRthis" 
-author: "Author: Daniela Cassol (danicassol@gmail.com)"
+title: "SPhic" 
+author: "Author: Daniela Cassol (danielac@ucr.edu) and Thomas Girke (thomas.girke@ucr.edu)"
 date: "Last update: `r format(Sys.time(), '%d %B, %Y')`" 
 output:
   BiocStyle::html_document:
     toc_float: true
     code_folding: show
-package: SPRthis
+package: systemPipeR
 vignette: |
   %\VignetteEncoding{UTF-8}
-  %\VignetteIndexEntry{WF: Workflow Template}
+  %\VignetteIndexEntry{SPhic Workflow Template}
   %\VignetteEngine{knitr::rmarkdown}
 fontsize: 14pt
 bibliography: bibtex.bib
@@ -23,10 +23,10 @@ word-break: keep-all !important;
 word-wrap: initial !important;
 }
 ```
-
+<!--
 <!--
 - Compile from command-line
-Rscript -e "rmarkdown::render('SPRthis.Rmd', c('BiocStyle::html_document'), clean=F); knitr::knit('SPRthis.Rmd', tangle=TRUE)"; Rscript -e "rmarkdown::render('SPRthis.Rmd', c('BiocStyle::pdf_document'))"
+Rscript -e "rmarkdown::render('SPhic.Rmd', c('BiocStyle::html_document'), clean=TRUE)"
 -->
 
 ```{r style, echo = FALSE, results = 'asis'}
@@ -38,11 +38,15 @@ knitr::opts_chunk$set(
     tidy.opts=list(width.cutoff=60), tidy=TRUE)
 ```
 
-```{r setup, echo=FALSE, message=FALSE, wwarning=FALSE, eval=FALSE}
+```{r setup, echo=FALSE, message=FALSE, wwarning=FALSE, eval=TRUE}
 suppressPackageStartupMessages({
-
+  library(systemPipeR)
 })
 ```
+
+# Under Development
+
+This workflow is under development!
 
 # Version Information
 

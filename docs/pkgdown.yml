@@ -1,6 +1,10 @@
-pandoc: '2.5'
+pandoc: '2.13'
 pkgdown: 1.6.1
 pkgdown_sha: ~
-articles: {}
-last_built: 2021-02-13T01:12Z
+articles:
+  SPhic: SPhic.html
+last_built: 2021-04-23T04:31Z
+urls:
+  reference: https://systempipe.org/SPhic/reference
+  article: https://systempipe.org/SPhic/articles
 
