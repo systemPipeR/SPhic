@@ -6,19 +6,12 @@
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 <!-- badges: end -->
 
-
 ### :construction: Under Development!
 
 > This pipeline is currently under development and does not have a stable release yet.
 
 ### Installation
 
-To install the package, please use the _`BiocManager::install`_ command:
-```
-if (!requireNamespace("BiocManager", quietly=TRUE))
-    install.packages("BiocManager")
-BiocManager::install("systemPipeR/SPhic", build_vignettes=TRUE, dependencies=TRUE)
-```
 To obtain the *systemPipeR* and *systemPipeRdata*, please run as follow:
 ```
 if (!requireNamespace("BiocManager", quietly=TRUE))
@@ -28,3 +21,21 @@ BiocManager::install("systemPipeRdata")
 ```
 
 ### Usage
+
+To test workflows quickly or design new ones from existing templates, users can
+generate with a single command workflow instances fully populated with sample data 
+and parameter files required for running a chosen workflow.
+
+Use `git` or `git-bash.exe` (Windows) to download the template and run 
+
+```
+git clone https://github.com/systemPipeR/SPhic.git
+cd SPhic
+```
+
+To init the workflow management instance, run
+```r
+library("systemPipeR")
+sal <- SPRproject()
+sal <- importWF(sal, file_path = "SPhic.Rmd")
+```
